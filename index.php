@@ -1,4 +1,29 @@
 <?php
+//creo array di lettere, lettere maiuscole, numeri e simboli da cui si puoi pescare
+$characters = array(
+'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+
+'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+':', ';', '<', '=', '>', '?', '@', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', '[', ']', '^', '_', '{', '|', '}', '~', '£', '¥',     
+);
+
+//funzione per generare password casuale 
+$rand_password = array_rand($characters, 4);
+
+foreach($rand_password as $key){
+    print $characters[$key];
+}
+
+//recuperiamo il dato inviato
+$number = $_GET ['number'] ?? '';
+
+var_dump($number);
+//da stringa a numero
+$password = intval($number);
+echo $password;
 
 ?>
 
@@ -23,12 +48,12 @@
         <section class="container pt-3">
             <form action="" method="GET" class="pt-3 px-5 bg-dark-subtle rounded">
                 <div class="pt-3 d-flex justify-content-between">
-                   <label for="password">Lunghezza password:</label>
-                   <input type="text" name="passord" id="password">
+                   <label for="number">Lunghezza password:</label>
+                   <input type="number" name="number" id="number" min="4" max="12" value="<?php echo $number ?>">
                 </div>
                 <div class="py-3">
-                   <button type="button" class="btn btn-primary">Invia</button>
-                   <button type="button" class="btn btn-secondary">Annulla</button>
+                   <button type="submit" class="btn btn-primary">Invia</button>
+                   <button type="reset" class="btn btn-secondary">Annulla</button>
                 </div>
             </form>
         </section>
