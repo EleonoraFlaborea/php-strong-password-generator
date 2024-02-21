@@ -11,7 +11,7 @@ $characters = array(
 );
 
 //funzione per generare password casuale 
-$rand_password = array_rand($characters, 4);
+$rand_password = array_rand($characters, $password);
 
 foreach($rand_password as $key){
     print $characters[$key];
