@@ -21,9 +21,18 @@
     </header>
     <main>
         <section class="container pt-3">
-            <form action="" method="GET" class="pt-3 d-flex justify-content-around">
-                <label for="password">Lunghezza password:</label>
-                <input type="text" name="passord" id="password">
+            <form action="" method="GET" class="pt-3 px-5">
+                <div class="pt-3 d-flex justify-content-between">
+                   <label for="password">Lunghezza password:</label>
+                   <input type="text" name="passord" id="password">
+                </div>
+                <div class="pt-3">
+                   <button type="button" class="btn btn-primary">Invia</button>
+                   <button type="button" class="btn btn-secondary">Annulla</button>
+                </div>
+                
+
+                
             </form>
         </section>
     </main>
