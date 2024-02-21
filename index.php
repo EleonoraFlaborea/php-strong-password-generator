@@ -1,5 +1,5 @@
 <?php
-/*Milestone 2: spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
+/*
 Milestone 3: invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION 
 recupererà la password da mostrare all’utente.
 */
@@ -22,12 +22,7 @@ $number = $_GET ['number'] ?? '';
 $password = intval($number);
 echo $password;
 
-//funzione per generare password casuale 
-$rand_password = array_rand($characters, $password);
-
-foreach($rand_password as $key){
-    print $characters[$key];
-}
+include './includes/functions.php'
 
 ?>
 
