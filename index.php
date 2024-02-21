@@ -1,4 +1,9 @@
 <?php
+/*Milestone 2: spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
+Milestone 3: invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION 
+recupererà la password da mostrare all’utente.
+*/
+
 //creo array di lettere, lettere maiuscole, numeri e simboli da cui si puoi pescare
 $characters = array(
 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
@@ -10,20 +15,19 @@ $characters = array(
 ':', ';', '<', '=', '>', '?', '@', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', '[', ']', '^', '_', '{', '|', '}', '~', '£', '¥',     
 );
 
+//recuperiamo il dato inviato
+$number = $_GET ['number'] ?? '';
+
+//da stringa a numero
+$password = intval($number);
+echo $password;
+
 //funzione per generare password casuale 
 $rand_password = array_rand($characters, $password);
 
 foreach($rand_password as $key){
     print $characters[$key];
 }
-
-//recuperiamo il dato inviato
-$number = $_GET ['number'] ?? '';
-
-var_dump($number);
-//da stringa a numero
-$password = intval($number);
-echo $password;
 
 ?>
 
