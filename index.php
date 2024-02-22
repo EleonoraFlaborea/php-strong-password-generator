@@ -1,9 +1,4 @@
 <?php
-/*
-Milestone 3: invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION 
-recupererà la password da mostrare all’utente.
-*/
-
 //creo array di lettere, lettere maiuscole, numeri e simboli da cui si puoi pescare
 $characters = array(
 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
@@ -15,8 +10,11 @@ $characters = array(
 ':', ';', '<', '=', '>', '?', '@', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', '[', ']', '^', '_', '{', '|', '}', '~', '£', '¥',     
 );
 
+
+
 //recuperiamo il dato inviato
 $number = $_GET ['number'] ?? '';
+
 
 //da stringa a numero
 $password = intval($number);

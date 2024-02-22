@@ -1,5 +1,4 @@
 <?php
-//FUNZIONI
 
 //funzione per generare password casuale 
 $rand_password = array_rand($characters, $password);
